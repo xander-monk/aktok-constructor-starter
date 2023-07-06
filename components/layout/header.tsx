@@ -62,99 +62,63 @@ export const Header = ({ data }: { data: GlobalHeader }) => {
   }, []);
 
   return (
-    <div
-      className={`relative overflow-hidden bg-gradient-to-b ${headerColorCss}`}
-    >
-      <Container size="custom" className="py-0 relative z-10 max-w-8xl">
-        <div className="flex items-center justify-between gap-6">
-          <h4 className="select-none text-lg font-bold tracking-tight my-4 transition duration-150 ease-out transform">
-            <Link
-              href="/"
-              className="flex gap-1 items-center whitespace-nowrap tracking-[.002em]"
-            >
-              <Icon
-                tinaField={tinaField(data, "icon")}
-                parentColor={data.color}
-                data={{
-                  name: data.icon.name,
-                  color: data.icon.color,
-                  style: data.icon.style,
-                }}
-              />
-              <span data-tina-field={tinaField(data, "name")}>{data.name}</span>
-            </Link>
-          </h4>
-          <ul className="flex gap-6 sm:gap-8 lg:gap-10 tracking-[.002em] -mx-4">
-            {data.nav &&
-              data.nav.map((item, i) => {
-                const activeItem =
-                  (item.href === ""
-                    ? router.asPath === "/"
-                    : router.asPath.includes(item.href)) && isClient;
-                return (
-                  <li
-                    key={`${item.label}-${i}`}
-                    className={`${
-                      activeItem ? activeItemClasses[theme.color] : ""
-                    }`}
-                  >
-                    <Link
-                      data-tina-field={tinaField(item, "label")}
-                      href={`/${item.href}`}
-                      className={`relative select-none	text-base inline-block tracking-wide transition duration-150 ease-out hover:opacity-100 py-8 px-4 ${
-                        activeItem ? `` : `opacity-70`
-                      }`}
-                    >
-                      {item.label}
-                      {activeItem && (
-                        <svg
-                          className={`absolute bottom-0 left-1/2 w-[180%] h-full -translate-x-1/2 -z-1 opacity-10 dark:opacity-15 ${
-                            activeBackgroundClasses[theme.color]
-                          }`}
-                          preserveAspectRatio="none"
-                          viewBox="0 0 230 230"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <rect
-                            x="230"
-                            y="230"
-                            width="230"
-                            height="230"
-                            transform="rotate(-180 230 230)"
-                            fill="url(#paint0_radial_1_33)"
-                          />
-                          <defs>
-                            <radialGradient
-                              id="paint0_radial_1_33"
-                              cx="0"
-                              cy="0"
-                              r="1"
-                              gradientUnits="userSpaceOnUse"
-                              gradientTransform="translate(345 230) rotate(90) scale(230 115)"
-                            >
-                              <stop stopColor="currentColor" />
-                              <stop
-                                offset="1"
-                                stopColor="currentColor"
-                                stopOpacity="0"
-                              />
-                            </radialGradient>
-                          </defs>
-                        </svg>
-                      )}
-                    </Link>
-                  </li>
-                );
-              })}
-          </ul>
-        </div>
-        <div
-          className={`absolute h-1 bg-gradient-to-r from-transparent ${
-            data.color === "primary" ? `via-white` : `via-black dark:via-white`
-          } to-transparent bottom-0 left-4 right-4 -z-1 opacity-5`}
-        />
-      </Container>
-    </div>
+    <header className="bg-[#F4F5F7] py-6 px-6 md:px-20 ">
+      <div className="flex justify-between w-[95%] items-center">
+          <div className="">
+              <img src="./images/aktok.svg" alt="aktok"/>
+          </div>
+          <div className="flex justify-between items-center gap-8">
+              <p className="flex items-center gap-4 ">
+                  <span className="text-[#7886a2] uppercase text-sm font-light gothamPro">
+                      About platform
+                  </span>
+              </p>
+              <div className="flex items-center gap-1 py-2 group px-4 cursor-pointer relative hover:border-b-2 hover:border-[#FF9933]">
+                  <span className="text-[#7886a2] uppercase text-sm font-light gothamPro">
+                      Services 
+                  </span>
+                  <span>
+                      <img src="./images/arr-down.svg" alt=""/>
+                  </span>
+                  <div className="absolute group-hover:block hidden  py-4 px-2 w-[200px] top-[33px] left-0 bg-white  border-t-2 border-[#FF9933] dropdown-shadow rounded-br-lg rounded-bl-lg">
+                      <ul className="">
+                          <li className="uppercase my-2 hover:font-semibold gothamPro text-[13px] text-[#404858] hover:text-[#FF9933] cursor-pointer"> <a href=""> Chatbot Development </a> </li>
+                      </ul>
+                  </div>
+              </div>
+              <p className="flex items-center gap-1">
+                  <span className="text-[#7886a2] uppercase text-sm font-light gothamPro">
+                      why choose us 
+                  </span>
+              </p>
+              <div className="flex items-center gap-1 py-2 group px-4 relative hover:border-b-2 hover:border-[#FF9933]">
+                  <span className="text-[#7886a2] uppercase text-sm font-light gothamPro">
+                      solutions 
+                  </span>
+                  <span>
+                      <img src="./images/arr-down.svg" alt=""/>
+                  </span>
+                  <div className="absolute group-hover:block hidden  py-4 px-2 w-[200px] top-[33px] left-0 bg-white  border-t-2 border-[#FF9933] dropdown-shadow rounded-br-lg rounded-bl-lg">
+                      <ul className="">
+                          <li className="uppercase my-2 hover:font-semibold gothamPro text-[13px] text-[#404858] hover:text-[#FF9933] cursor-pointer"> Immigration Agency </li>
+                      </ul>
+                  </div>
+              </div>
+              <p className="flex items-center gap-4">
+                  <span className="text-[#7886a2] uppercase text-sm font-light gothamPro">
+                      Pricing 
+                  </span>
+              </p>
+          </div>
+          <div className="flex gap-4 items-center">
+            <span className="text-[#486284] text-base gothamPro font-light">
+              Register
+            </span>
+              <button className="bg-[#6866FF] px-6 py-2 rounded-[20px]  text-white text-sm gothamPro font-light">
+                  Login
+              </button>
+          </div>
+      </div>
+    </header>
   );
 };

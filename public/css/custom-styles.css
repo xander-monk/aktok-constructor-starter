@@ -1,0 +1,126 @@
+@font-face {
+    font-family: "GothamPro-Light";
+    src: url("./font/GothamPro-Light.ttf");
+  }
+  
+  @font-face {
+    font-family: "GothamPro-Bold";
+    src: url("./font/GothamPro-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: "GothamPro-Black";
+    src: url("./font/GothamPro-Black.ttf");
+  }
+
+  @font-face {
+    font-family: "GothamPro";
+    src: url("./font/GothamPro.ttf");
+  }
+  
+  @font-face {
+    font-family: "GothamPro-Medium";
+    src: url("./font/GothamPro-Medium.ttf");
+  }
+
+  .gothamPro-light{
+    font-family: "GothamPro-Light";
+  }
+  .gothamPro-bold{
+    font-family: "GothamPro-Bold";
+  }
+  .gothamPro-Black{
+    font-family: "GothamPro-Black" !important;
+  }
+  .gothamPro{
+    font-family: "GothamPro" !important;
+    /* color: red; */
+  }
+  .githamPro-bold{
+    font-family: "GothamPro-Bold";
+  }
+  .githamPro-Black{
+    font-family: "GothamPro-Black";
+  }
+  .notoSans {
+    font-family: 'Noto Sans', sans-serif;
+  }
+  .blue-button-shadow {
+    box-shadow: 0px 12px 16px rgba(4, 52, 119, 0.16);
+  }
+.rambow-radiant {
+  background: radial-gradient(92.19% 472.8% at 0% 135.39%, #6B69FF 6.21%, #A065FF 26.95%, #FFA953 70.31%, #FFD159 97.92%);
+  /* transform: rotate(-180deg); */
+}
+
+.blur-bg {
+  background: rgba(255, 255, 255, 0.8);
+  filter: blur(30px);
+}
+.second-rambow-radiant {
+  background: radial-gradient(137.24% 236.63% at 33.65% -39.35%, #6B69FF 7.29%, #A065FF 38.54%, #FFA953 75.52%, #FFD159 97.92%)
+}
+.rambow-card-1 {
+  background: rgba(255, 255, 255, 0.15);
+box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 30px ;
+background: linear-gradient(134.51deg, #FFFFFF -11.69%, rgba(255, 255, 255, 0) 97.35%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+
+}
+
+.border-text {
+
+box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.blue-radiant {
+  background: linear-gradient(90deg, #6D5FF6 7.27%, #65E5F7 92.14%);
+}
+.radiant-two {
+  background: radial-gradient(222.41% 257.93% at -11.54% 108.58%, #FFD159 4.17%, #FFA953 15.1%, #A065FF 32.29%, #6B69FF 46.23%, #A065FF 67.71%,  #FFA953 15.1%, #FFA953 83.33%, #FFD159 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}
+.radiant-three{
+  background: linear-gradient(90deg, #6D5FF6 7.27%, #65E5F7 92.14%);
+}
+.radiant-four{
+  background: radial-gradient(161.75% 536.16% at 11.56% 0%, #6B69FF 7.29%, #A065FF 38.18%, #FFA953 76.47%, #FFD159 97.92%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}
+.radiant-five{
+  background: linear-gradient(90deg, #6D5FF6 7.27%, #65E5F7 92.14%);
+}
+.radiant-six {
+  background: radial-gradient(161.75% 536.16% at 11.56% 0%, #6B69FF 7.29%, #A065FF 38.18%, #FFA953 76.47%, #FFD159 97.92%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+}
+.bg-image-orange {
+  background: url(../images/students.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-image {
+  background: url(../images/teacher.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.border-radiant {
+  border: 2px solid;
+  border-image-source: linear-gradient(110.61deg, #FFFFFF -6.35%, rgba(255, 255, 255, 0) 97.64%);
+}
+.radiant-bg-color {
+  background: linear-gradient(110.61deg, #FFFFFF -6.35%, rgba(255, 255, 255, 0) 97.64%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  }
+.dropdown-shadow {
+  box-shadow: 0px 16px 32px 0px #4048581F;
+}
+.card-radiant-bg {
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.intelectual-student {
+  background: url(../images/student-bg-2.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

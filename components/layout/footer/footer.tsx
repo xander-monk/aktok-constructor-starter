@@ -43,93 +43,72 @@ export const Footer = ({ data, icon, rawData }) => {
       : footerColor.default;
 
   return (
-    <footer className={`bg-gradient-to-br ${footerColorCss}`}>
-      <Container className="relative" size="small">
-        <div className="flex justify-between items-center gap-6 flex-wrap">
-          <Link
-            href="/"
-            className="group mx-2 flex items-center font-bold tracking-tight text-gray-400 dark:text-gray-300 opacity-50 hover:opacity-100 transition duration-150 ease-out whitespace-nowrap"
-          >
-            <Icon
-              parentColor={data.color}
-              data={{
-                name: icon.name,
-                color: data.color === "primary" ? "primary" : icon.color,
-                style: icon.style,
-              }}
-              className="inline-block h-10 w-auto group-hover:text-orange-500"
-            />
-          </Link>
-          <div className="flex gap-4">
-            {data.social && data.social.facebook && (
-              <a
-                className="inline-block opacity-80 hover:opacity-100 transition ease-out duration-150"
-                href={data.social.facebook}
-                target="_blank"
-              >
-                <FaFacebookF
-                  className={`${socialIconClasses} ${
-                    socialIconColorClasses[
-                      data.color === "primary" ? "primary" : theme.color
-                    ]
-                  }`}
-                />
-              </a>
-            )}
-            {data.social && data.social.twitter && (
-              <a
-                className="inline-block opacity-80 hover:opacity-100 transition ease-out duration-150"
-                href={data.social.twitter}
-                target="_blank"
-              >
-                <FaTwitter
-                  className={`${socialIconClasses} ${
-                    socialIconColorClasses[
-                      data.color === "primary" ? "primary" : theme.color
-                    ]
-                  }`}
-                />
-              </a>
-            )}
-            {data.social && data.social.instagram && (
-              <a
-                className="inline-block opacity-80 hover:opacity-100 transition ease-out duration-150"
-                href={data.social.instagram}
-                target="_blank"
-              >
-                <AiFillInstagram
-                  className={`${socialIconClasses} ${
-                    socialIconColorClasses[
-                      data.color === "primary" ? "primary" : theme.color
-                    ]
-                  }`}
-                />
-              </a>
-            )}
-            {data.social && data.social.github && (
-              <a
-                className="inline-block opacity-80 hover:opacity-100 transition ease-out duration-150"
-                href={data.social.github}
-                target="_blank"
-              >
-                <FaGithub
-                  className={`${socialIconClasses} ${
-                    socialIconColorClasses[
-                      data.color === "primary" ? "primary" : theme.color
-                    ]
-                  }`}
-                />
-              </a>
-            )}
+    <footer className="bg-[#F4F5F7] py-6 px-6 md:px-12 ">
+      <div className="flex justify-between items-end">
+          <div className="">
+              <a href="/"><img src="./images/aktok.svg" alt="aktok"/></a>
           </div>
-          <RawRenderer parentColor={data.color} rawData={rawData} />
-        </div>
-        <div
-          className={`absolute h-1 bg-gradient-to-r from-transparent ${
-            data.color === "primary" ? `via-white` : `via-black dark:via-white`
-          } to-transparent top-0 left-4 right-4 opacity-5`}
-        ></div>
-      </Container>
+          <div className="flex justify-between items-center gap-4">
+              <p className="flex items-center gap-1 cursor-pointer ">
+                  <span className="text-[#7886a2] uppercase text-[13px] font-light gothamPro">
+                      <a href=""> About platform </a>
+                  </span>
+              </p>
+              <div className="flex items-center gap-1 py-2 group px-4 cursor-pointer relative hover:border-b-2 hover:border-[#FF9933]">
+                  <span className="text-[#7886a2] uppercase text-sm font-light gothamPro">
+                      <a href="">Services </a>
+                  </span>
+                  <span>
+                      <img src="./images/arr-down.svg" alt=""/>
+                  </span>
+                  <div className="absolute group-hover:block hidden  py-4 px-2 w-[200px] top-[33px] left-0 bg-white  border-t-2 border-[#FF9933] dropdown-shadow rounded-br-lg rounded-bl-lg">
+                      <ul className="">
+                          <li className="uppercase my-2 hover:font-semibold gothamPro text-[13px] text-[#404858] hover:text-[#FF9933] cursor-pointer"> <a href=""> Chatbot Development </a> </li>
+                      </ul>
+                  </div>
+              </div>
+              <div className="flex items-center gap-1 py-2 group px-4 relative hover:border-b-2 hover:border-[#FF9933]">
+                  <span className="text-[#7886a2] uppercase text-sm font-light gothamPro">
+                      <a href="">solutions </a>
+                  </span>
+                  <span>
+                      <img src="./images/arr-down.svg" alt=""/>
+                  </span>
+                  <div className="absolute group-hover:block hidden  py-4 px-2 w-[200px] top-[33px] left-0 bg-white  border-t-2 border-[#FF9933] dropdown-shadow rounded-br-lg rounded-bl-lg">
+                      <ul className="">
+                          <li className="uppercase my-2 hover:font-semibold gothamPro text-[13px] text-[#404858] hover:text-[#FF9933] cursor-pointer"> Immigration Agency </li>
+                      </ul>
+                  </div>
+              </div>
+              <p className="flex items-center gap-4 cursor-pointer">
+                  <span className="text-[#7886a2] uppercase text-[13px] font-light gothamPro">
+                      Pricing 
+                  </span>
+              </p>
+          </div>
+          <div>
+            <div className="flex gap-4 items-center">
+              <div>
+                  <p className="text-[#5E6A82] text-sm gothamPro">+1 877 408 34 03</p>
+                  <p className="text-[#5E6A82] text-sm gothamPro">welcome@aktok.com</p>
+                  <p className="text-[#5E6A82] text-sm gothamPro">facebook</p>
+
+              </div>
+                  <div className="bg-[white] p-4 rounded-lg flex items-center gap-4">
+                      <span>
+                          <img src="./images/Chatbot-new.svg" alt="chatbot"/>
+                      </span>
+                      <p className="text-[#5E6A82] gothamPro text-base font-light">
+                          Sign up for AKTOK <br/>
+                          <span className="text-[#2E363E] font-semibold">news and updates</span>
+                      </p>
+                      <button className="bg-[#6866FF] hover:bg-[#8C8BFB] active:bg-[#6257E4] px-6 py-2 rounded-[20px]  text-white text-sm gothamPro font-light">
+                          Sign up
+                      </button>
+                  </div>
+            </div>
+          </div>
+      </div>
     </footer>
   );
 };
