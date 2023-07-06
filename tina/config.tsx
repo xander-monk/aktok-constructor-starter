@@ -8,12 +8,17 @@ import { iconSchema } from "../components/util/icon";
 import { heroArtTightBlockSchema } from "../components/blocks/hero_artRight";
 
 const config = defineConfig({
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID!,
+  clientId: 
+    process.env.NEXT_PUBLIC_TINA_CLIENT_ID! || 
+    'f8a6d5c2-2605-4505-b5ff-b5855900f40a',
   branch:
     process.env.NEXT_PUBLIC_TINA_BRANCH! || // custom branch env override
     process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF! || // Vercel branch env
-    process.env.HEAD!, // Netlify branch env
-  token: process.env.TINA_TOKEN!,
+    process.env.HEAD! || // Netlify branch env
+    'main', 
+  token: 
+    process.env.TINA_TOKEN! || 
+    'f1da557109c02b0c269d06934031e178950f1a47',
   media: {
     // If you wanted cloudinary do this
     // loadCustomStore: async () => {
